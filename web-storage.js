@@ -1,5 +1,5 @@
-/* jshint node: true */
-/* globals localStorage, window, DOMException */
+/* jshint node: true, browser: true */
+/* globals DOMException */
 
 (function() {
     
@@ -8,7 +8,7 @@
     } else {
         console.warn("Local storage is not available");
     }
-    
+
 })();
 
 /*
