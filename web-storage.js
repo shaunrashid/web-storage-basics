@@ -4,12 +4,26 @@
 (function() {
     
     if(isStorageAvailable('localStorage')) {
-        console.log("Local storage is available");
+        var button = document.getElementById('save');
+
+        button.addEventListener('click', function() {
+            var username = document.getElementById('user-name').value;
+            
+            saveUserName(username);
+        });
+        
     } else {
         console.warn("Local storage is not available");
     }
 
 })();
+
+
+function saveUserName(username) {
+    var storage = window.localStorage;
+    storage.setItem('username', username);
+}
+
 
 /*
     Test to see if Web storage is supported and available.
